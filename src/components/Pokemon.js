@@ -2,6 +2,11 @@ import React from 'react';
 
 const Pokemon = ({ details }) => {
   console.log(details);
+
+  if (details.name === undefined) {
+    return null;
+  }
+
   return (
     <div className="pokemon-card">
       <h1>{details.name}</h1>
